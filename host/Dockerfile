@@ -8,6 +8,7 @@ RUN apt-get update && apt-get -y install nmap
 RUN apt-get update && apt-get -y install hydra
 RUN apt-get update && apt-get -y install vim
 RUN apt-get update && apt-get -y install crunch
+
 RUN adduser --disabled-password --gecos "" labuser && echo 'labuser:labuser' | chpasswd 
 
 COPY README.txt /home/labuser/
