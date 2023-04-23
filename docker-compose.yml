@@ -1,0 +1,27 @@
+services:
+  host:
+    build:
+      context: ./host
+    ports:
+      - '22:22'
+    networks:
+      my-network:
+        ipv4_address: 192.168.20.2
+  
+  target:
+    build:
+      context: ./target
+    networks:
+      my-network:
+        ipv4_address: 192.168.20.3
+
+networks:
+  my-network:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 192.168.20.0/24
+         gateway: 192.168.20.1
+
+
+

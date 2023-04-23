@@ -1,0 +1,1 @@
+Yay!! You are one step closer to getting the flag. Check the location where user scripts get executed at kernel installation time to get the flag (the flag may be encoded to base32).
